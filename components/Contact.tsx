@@ -15,31 +15,57 @@ const cardVariant = {
 const Contact = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
-  const [isLoading, setisLoading] = useState(false);
+  // const [isLoading, setisLoading] = useState(false);
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
 
-  const sendEmail = (e) => {
+  // type Props = {
+  //   current: HTMLFormElement;
+  // };
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(false)
     setSuccess(false)
 
-    emailjs
-      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
-        publicKey: process.env.NEXT_PUBLIC__PUBLIC_KEY,
-      })
-      .then(
-        () => {
-          setSuccess(true);
-          setisLoading(false)
-          form.current.reset()
-          console.log(form.current);
+    // emailjs
+    //   .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, {
+    //     publicKey: process.env.NEXT_PUBLIC__PUBLIC_KEY,
+    //   })
+    //   .then(
+    //     () => {
+    //       setSuccess(true);
+    //       setisLoading(false)
+    //       form.current.reset()
+    //       console.log(form.current);
           
-        },
-        (error) => {
-          setError(true);
-        },
-      );
+    //     },
+    //     (error) => {
+    //       setError(true);
+    //     },
+    //   );
+    // const sendEmail = (form: React.MutableRefObject<HTMLFormElement>) => {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
+          form.current as HTMLFormElement,
+          {
+            publicKey: process.env.NEXT_PUBLIC__PUBLIC_KEY as string,
+          }
+        )
+        .then(
+          () => {
+            setSuccess(true);
+            // setIsLoading(false);
+            form.current?.reset();
+            console.log("success")
+          },
+          (error) => {
+            setError(true);
+            console.log(error)
+          }
+        );
   };
 
   const checkEmail = () => {
@@ -78,8 +104,8 @@ const Contact = () => {
             <textarea name="user_message" rows={6} className="resize-none md:w-[30vw] min-w-md px-1 py-2 rounded-lg min-h-[20vh]" placeholder="How are you today"></textarea>
             <input type="text" name="user_email" placeholder="What's your email" className="mt-3 px-1 py-1 rounded-lg "/>
             <div className="flex flex-col justify-center items-center">
-            <button className={`flex justify-between items-center gap-2 pt-4 ${isLoading ? "text-unselect" : ""}`} disabled={isLoading ? true : false} >Send <span className=""><IoMdMail /></span></button>
-              <div className={`w-14 h-1 rounded-full  ${isLoading ? "bg-unselect" : "bg-black"}`}/>
+            <button className={`flex justify-between items-center gap-2 pt-4 `}  >Send <span className=""><IoMdMail /></span></button>
+              <div className={`w-14 h-1 rounded-full`}/>
               {success && <div className="pt-8">Will get back to you soon!</div>}
             {error && <div className="pt-8">Oops... something went wrong!</div>}
             </div>

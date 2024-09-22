@@ -9,7 +9,7 @@ export const socialMedia = [
 export const navLink = [
   // { url: "/", title: "Home" },
   { url: "/hong-kong", title: "Hong Kong" },
-  { url: "/england", title: "UK" },
+  { url: "/england", title: "England" },
   { url: "/turkey", title: "Turkey" },
   { url: "/italy", title: "Italy" },
   // { url: "#contact", title: "Contact" },
