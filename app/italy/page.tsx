@@ -22,17 +22,17 @@ const ItalyPage = () => {
         className='h-[100vh] flex justify-center items-center text-center font-extrabold text-6xl sm:text-8xl capitalize w-full'>{pathName}</motion.h1>
       <div className="gap-28 flex flex-col w-full justify-center items-center">
       <Card
-        image='/italy/DSCF2956.jpg'
+        image='/italy/DSCF2956.JPG'
         description="ISO 320 45mm f5.6 1/750s"
         title='Amalfi'
       />
       <Card
-        image='/italy/DSCF4847.jpg'
+        image='/italy/DSCF4847.JPG'
         description="ISO 320 f5 1/120s"
         title='Turin'
         />
         <Card
-        image='/italy/DSCF4851.jpg'
+        image='/italy/DSCF4851.JPG'
         description="ISO 1000 f5.6 1/220s"
         title='Turin'
       />
