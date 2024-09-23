@@ -12,7 +12,7 @@ const textVariant = {
 const HongKongPage = () => {
   const pathName = usePathname().replace("/", "");
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center md:gap-28 gap-14'>
       <motion.h1
         variants={textVariant}
         initial="hidden"

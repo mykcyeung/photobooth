@@ -20,7 +20,7 @@ const ItalyPage = () => {
         animate="visible"
         transition={{ duration: 5 }}
         className='h-[100vh] flex justify-center items-center text-center font-extrabold text-6xl sm:text-8xl capitalize w-full'>{pathName}</motion.h1>
-      <div className="gap-28 flex flex-col w-full justify-center items-center">
+      <div className=" flex flex-col w-full justify-center items-center md:gap-28 gap-14">
       <Card
         image='/italy/DSCF2956.JPG'
         description="ISO 320 45mm f5.6 1/750s"
