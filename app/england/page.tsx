@@ -28,7 +28,7 @@ const UKPage = () => {
           title='London'
         />
         <Card
-          image="/uk/DSCF4999.jpg"
+          image="/uk/DSCF4999.JPG"
           // description="ISO 320 163mm f5.6 1/420s"
           title='York'
         />
