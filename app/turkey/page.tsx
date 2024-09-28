@@ -19,17 +19,39 @@ const TurkeyPage = () => {
         initial="hidden"
         animate="visible"
         transition={{ duration: 5 }}
-        className='h-[100vh] flex justify-center items-center text-center font-extrabold text-6xl sm:text-8xl capitalize w-full'>{pathName}</motion.h1>
+        className='h-[80vh] flex justify-center items-center text-center font-extrabold text-6xl sm:text-8xl capitalize w-full'>{pathName}</motion.h1>
       <div className="md:gap-28 gap-14 flex flex-col w-full justify-center items-center">
       <Card
         image='/turkey/DSCF1002.JPG'
         description="ISO 320 27mm f5.6 1/300s"
-        title='Istanbul'
+          title='Istanbul'
+          height={ 3213}
+        width={ 2085}
+        classname='md:max-w-[60vw] lg:max-w-[50vw]'
       />
       <Card
         image='/turkey/DSCF1429.JPG'
         description="ISO 1250 282mm f5.6 1/280s"
-        title='Kas'
+          title='Kas'
+          height={ 2080}
+        width={ 3120}
+        classname=''
+        />
+        <Card
+        image='/turkey/DSCF1615.JPG'
+        description="ISO 320 27mm f5.6 1/300s"
+          title='Cappadocia'
+          height={ 3213}
+        width={ 2085}
+        classname='md:max-w-[60vw] lg:max-w-[50vw]'
+        />
+        <Card
+        image='/turkey/DSCF1661.JPG'
+        description="ISO 320 27mm f5.6 1/300s"
+          title='Cappadocia'
+          height={ 3213}
+        width={ 2085}
+        classname='md:max-w-[60vw] lg:max-w-[50vw]'
       />
       </div>
       

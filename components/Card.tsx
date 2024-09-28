@@ -7,6 +7,9 @@ interface CardProps {
   image: string;
   description?: string;
   title: string;
+  width?: number;
+  height?: number;
+  classname?: string;
 }
 
 const textVariant = {
@@ -14,17 +17,17 @@ const textVariant = {
   visible: {opacity: 1}
 }
 
-const Card = ({image, description, title}: CardProps) => {
+const Card = ({image, description, title, width, height, classname}: CardProps) => {
   return (
     <div className=' flex flex-col justify-center items-center'>
-      <div className="relative flex justify-center items-center px-8 transition-all duration-700 h-[90vh] min-w-[80vw]">
+      <div className= {`flex justify-center items-center px-8 transition-all duration-700 ${classname}`}>
       <Image
         src={image}
         alt={title}
-          // width={350}
-          // height={600}
-          fill
-        className='object-contain '
+          width={width}
+          height={height}
+          // fill
+        className='object-contain'
         />
       </div>
       <motion.div

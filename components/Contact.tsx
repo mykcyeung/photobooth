@@ -99,9 +99,18 @@ const Contact = () => {
             /> */}
           </div>
           {/* <div className="w-1 h-48 bg-gray-200 rounded-full"></div> */}
-          <form ref={form} onSubmit={sendEmail} className="flex flex-col">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col">
+            
             <p className="pb-2 ">Hi Jay,</p>
-            <textarea name="user_message" rows={6} className="resize-none md:w-[30vw] min-w-md px-1 py-2 rounded-lg min-h-[20vh]" placeholder="How are you today"></textarea>
+
+            <textarea
+              name="user_message"
+              rows={6}
+              className="resize-none md:w-[30vw] min-w-md px-1 py-2 rounded-lg min-h-[20vh]"
+              placeholder="How are you today" />
             <input type="text" name="user_email" placeholder="What's your email" className="mt-3 px-1 py-1 rounded-lg "/>
             <div className="flex flex-col justify-center items-center">
             <button className={`flex justify-between items-center gap-2 pt-4 `}  >Send <span className=""><IoMdMail /></span></button>

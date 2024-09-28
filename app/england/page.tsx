@@ -19,18 +19,24 @@ const UKPage = () => {
         initial="hidden"
         animate="visible"
         transition={{ duration: 5 }}
-        className='h-[100vh] flex justify-center items-center text-center font-extrabold text-6xl sm:text-8xl capitalize w-full'>{pathName}</motion.h1>
+        className='h-[80vh] flex justify-center items-center text-center font-extrabold text-6xl sm:text-8xl capitalize w-full'>{pathName}</motion.h1>
       <div className="md:gap-28 gap-14 flex flex-col w-full justify-center items-center ">
         
           <Card
           image="/uk/DSCF3453.jpg"
           description="ISO 320 163mm f5.6 1/420s"
           title='London'
+          height={ 3213}
+        width={ 2085}
+        classname='md:max-w-[60vw] lg:max-w-[50vw]'
         />
         <Card
           image="/uk/DSCF4999.JPG"
           // description="ISO 320 163mm f5.6 1/420s"
           title='York'
+          height={ 3213}
+        width={ 2085}
+        classname='md:max-w-[60vw] lg:max-w-[50vw]'
         />
         
       

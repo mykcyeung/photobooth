@@ -18,11 +18,14 @@ const HongKongPage = () => {
         initial="hidden"
         animate="visible"
         transition={{ duration: 5 }}
-        className='h-[100vh] flex justify-center items-center text-center font-extrabold text-6xl sm:text-8xl capitalize'>{pathName.replace("-", " ")}</motion.h1>
+        className='h-[80vh] flex justify-center items-center text-center font-extrabold text-6xl sm:text-8xl capitalize'>{pathName.replace("-", " ")}</motion.h1>
       <Card
         image='/HK01.JPG'
         description="ISO 320 112mm f5 1/800s"
         title='Choi Hung Estate'
+        height={ 3213}
+        width={ 2085}
+        classname='md:max-w-[60vw] lg:max-w-[50vw]'
       />
     </div>
   )
